@@ -1,4 +1,7 @@
 #!/bin/bash
+script_dir="$(dirname $0)"
+cd $script_dir
+
 # ROS1 noetic
 NAME=ROS_Noetic
 ./docker/ros_noetic/run.bash -g -n $NAME # -s /media/work/skt_data005 # -r -c _cuda11.2.2_ubuntu20.04

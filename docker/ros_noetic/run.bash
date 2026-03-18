@@ -1,4 +1,6 @@
 #!/bin/bash
+script_dir="$(dirname $0)"
+cd $script_dir
 
 IMAGE_NAME=hrjp/ros:noetic
 CONTAINER_NAME=ros_noetic

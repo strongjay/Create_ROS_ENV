@@ -1,7 +1,10 @@
 #!/bin/bash
+script_dir="$(dirname $0)"
+cd $script_dir
+
 # ROS1 melodic
 NAME=ROS_Melodic    
-./docker/ros_melodic/run.bash -g -n $NAME # -s /media/work/skt_data005 # -r -c _cuda11.2.2_ubuntu18.04 
+./docker/ros_melodic/run.bash -g -n $NAME -s /media/work/skt_data005 # -r -c _cuda11.2.2_ubuntu18.04 
 #   -g: 启用GPU支持 
 #   -r: 容器退出时自动删除
 #   -n: 指定容器名称

@@ -1,4 +1,6 @@
 #!/bin/bash
+script_dir="$(dirname $0)"
+cd $script_dir
 
 IMAGE_NAME=hrjp/ros:melodic_cudagl
 CONTAINER_NAME=ros_melodic
@@ -7,7 +9,6 @@ SHARE_FOLDER_CMD=""
 GPU_CMD=""
 CONTAINER_NAME_CMD="--name $CONTAINER_NAME"
 NETHOST_CMD="--net=host"
-CREATE_NEW_CONTAINER=true
 
 usage_exit() {
         echo " " 1>&2
