@@ -3,12 +3,10 @@ script_dir="$(dirname $0)"
 cd $script_dir
 
 # ROS1 melodic
-NAME=ROS_Melodic    
-./docker/ros_melodic/run.bash -g -n $NAME -s /media/work/PROGRAM # -r -c _cuda11.2.2_ubuntu18.04 
-#   -g: 启用GPU支持 
+NAME=ROS_Melodic_NoGPU    
+./docker/ros_melodic/run_no_gpu.bash -n $NAME -s /media/work/PROGRAM 
 #   -r: 容器退出时自动删除
 #   -n: 指定容器名称
 #   -s: 共享文件夹路径
-#   -c: 指定CUDA版本 
 #   -w: 不使用host网络模式
 
